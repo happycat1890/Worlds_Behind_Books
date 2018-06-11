@@ -2,33 +2,32 @@
 //  CoverViewController.swift
 //  Worlds_Behind_Books
 //
-//  Created by Molly's Work Account on 6/9/18.
+//  Created by Molly's Work Account on 6/11/18.
 //  Copyright © 2018 Molly's Work Account. All rights reserved.
 //
 
 import UIKit
 
-class CoverViewController: UIViewController {
 
-    var selectedCover: String?
+
+class CoverViewController: UIViewController {
     
+    var selectedCover: String?
     @IBOutlet var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = selectedCover
+        navigationItem.largeTitleDisplayMode = .never
         
-        navigationItem.largeTitleDisplayMode = .never //look up more info on navigationItem
-        
-        if let coverToLoad = selectedCover { //mandatory check + distributing the pictures
-            imageView.image = UIImage(named: coverToLoad)
+        if let imageToLoad = selectedCover {
+            imageView.image = UIImage(named: imageToLoad)
         }
-
-        // Do any additional setup after loading the view.
+        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.hidesBarsOnTap = true
     }

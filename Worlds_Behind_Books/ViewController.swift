@@ -49,10 +49,10 @@ class ViewController: UITableViewController {
         return cell
     }
     
-    /*override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if let cvScreen = storyboard?.instantiateViewController(withIdentifier: "Cover") as? CoverViewController  {
-            cvScreen.selectedCover = bookImageTitles[indexPath.row]
+           cvScreen.selectedCover = bookImageTitles[indexPath.row]
             
             //have to include a 'push' action from navigation controller to move to other screen
             //for now, will just include image of book cover
@@ -61,7 +61,7 @@ class ViewController: UITableViewController {
         }
     }
     
-    */
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -14,6 +14,7 @@
 		9B5080C020CC782200FA3B11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B5080BE20CC782200FA3B11 /* LaunchScreen.storyboard */; };
 		9B5080CB20CC782200FA3B11 /* Worlds_Behind_BooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5080CA20CC782200FA3B11 /* Worlds_Behind_BooksTests.swift */; };
 		9B5080D620CC782200FA3B11 /* Worlds_Behind_BooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5080D520CC782200FA3B11 /* Worlds_Behind_BooksUITests.swift */; };
+		9B52DF2520CEEE8D00CB47AD /* CoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B52DF2420CEEE8D00CB47AD /* CoverViewController.swift */; };
 		9B76A81220CEEB5F00784885 /* book_cover1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B76A80F20CEEB5F00784885 /* book_cover1.jpg */; };
 		9B76A81320CEEB5F00784885 /* book_cover2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B76A81020CEEB5F00784885 /* book_cover2.jpg */; };
 		9B76A81420CEEB5F00784885 /* book_cover3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B76A81120CEEB5F00784885 /* book_cover3.jpg */; };
@@ -50,6 +51,7 @@
 		9B5080D120CC782200FA3B11 /* Worlds_Behind_BooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Worlds_Behind_BooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B5080D520CC782200FA3B11 /* Worlds_Behind_BooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worlds_Behind_BooksUITests.swift; sourceTree = "<group>"; };
 		9B5080D720CC782200FA3B11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B52DF2420CEEE8D00CB47AD /* CoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverViewController.swift; sourceTree = "<group>"; };
 		9B76A80F20CEEB5F00784885 /* book_cover1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_cover1.jpg; sourceTree = "<group>"; };
 		9B76A81020CEEB5F00784885 /* book_cover2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_cover2.jpg; sourceTree = "<group>"; };
 		9B76A81120CEEB5F00784885 /* book_cover3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_cover3.jpg; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			children = (
 				9B5080B220CC782100FA3B11 /* AppDelegate.swift */,
 				9B5080B420CC782100FA3B11 /* ViewController.swift */,
+				9B52DF2420CEEE8D00CB47AD /* CoverViewController.swift */,
 				9B5080B620CC782100FA3B11 /* Main.storyboard */,
 				9B5080BC20CC782200FA3B11 /* Assets.xcassets */,
 				9B5080BE20CC782200FA3B11 /* LaunchScreen.storyboard */,
@@ -277,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B52DF2520CEEE8D00CB47AD /* CoverViewController.swift in Sources */,
 				9B5080B520CC782100FA3B11 /* ViewController.swift in Sources */,
 				9B5080B320CC782100FA3B11 /* AppDelegate.swift in Sources */,
 			);
