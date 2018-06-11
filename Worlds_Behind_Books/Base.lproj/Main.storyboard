@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -57,15 +58,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZlP-Nm-6nO">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="454"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gEV-7R-Hyn">
+                                <rect key="frame" x="0.0" y="482" width="375" height="101"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DA5-uO-6ej">
+                                <rect key="frame" x="0.0" y="591" width="375" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZlP-Nm-6nO" firstAttribute="leading" secondItem="6eK-9M-gQO" secondAttribute="leading" id="2m0-BK-i3H"/>
+                            <constraint firstItem="jQZ-ww-hry" firstAttribute="bottom" secondItem="gEV-7R-Hyn" secondAttribute="bottom" constant="84" id="6jX-J1-shQ"/>
+                            <constraint firstItem="gEV-7R-Hyn" firstAttribute="trailing" secondItem="ZlP-Nm-6nO" secondAttribute="trailing" id="830-XM-k7s"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="DA5-uO-6ej" secondAttribute="bottom" constant="-52" id="AyU-Bv-w50"/>
+                            <constraint firstItem="gEV-7R-Hyn" firstAttribute="top" secondItem="ZlP-Nm-6nO" secondAttribute="bottom" constant="8" symbolic="YES" id="Kd7-IX-Gd1"/>
                             <constraint firstItem="ZlP-Nm-6nO" firstAttribute="top" secondItem="jQZ-ww-hry" secondAttribute="top" id="Qb0-5j-S6l"/>
-                            <constraint firstItem="ZlP-Nm-6nO" firstAttribute="bottom" secondItem="jQZ-ww-hry" secondAttribute="bottom" id="VEy-i2-RaN"/>
+                            <constraint firstItem="ZlP-Nm-6nO" firstAttribute="bottom" secondItem="jQZ-ww-hry" secondAttribute="bottom" constant="-193" id="VEy-i2-RaN"/>
                             <constraint firstAttribute="trailing" secondItem="ZlP-Nm-6nO" secondAttribute="trailing" id="WY0-zX-Ugy"/>
+                            <constraint firstItem="DA5-uO-6ej" firstAttribute="leading" secondItem="gEV-7R-Hyn" secondAttribute="leading" id="bjO-oY-ArH"/>
+                            <constraint firstItem="DA5-uO-6ej" firstAttribute="top" secondItem="gEV-7R-Hyn" secondAttribute="bottom" constant="8" symbolic="YES" id="gtd-5e-Xq0"/>
+                            <constraint firstItem="gEV-7R-Hyn" firstAttribute="leading" secondItem="ZlP-Nm-6nO" secondAttribute="leading" id="mHP-mX-JpO"/>
+                            <constraint firstItem="DA5-uO-6ej" firstAttribute="trailing" secondItem="gEV-7R-Hyn" secondAttribute="trailing" id="z3W-Yu-Jgc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jQZ-ww-hry"/>
                     </view>
