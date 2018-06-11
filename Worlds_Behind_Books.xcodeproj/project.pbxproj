@@ -10,12 +10,13 @@
 		9B5080B320CC782100FA3B11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5080B220CC782100FA3B11 /* AppDelegate.swift */; };
 		9B5080B520CC782100FA3B11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5080B420CC782100FA3B11 /* ViewController.swift */; };
 		9B5080B820CC782100FA3B11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B5080B620CC782100FA3B11 /* Main.storyboard */; };
-		9B5080BB20CC782100FA3B11 /* Worlds_Behind_Books.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B5080B920CC782100FA3B11 /* Worlds_Behind_Books.xcdatamodeld */; };
 		9B5080BD20CC782200FA3B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B5080BC20CC782200FA3B11 /* Assets.xcassets */; };
 		9B5080C020CC782200FA3B11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B5080BE20CC782200FA3B11 /* LaunchScreen.storyboard */; };
 		9B5080CB20CC782200FA3B11 /* Worlds_Behind_BooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5080CA20CC782200FA3B11 /* Worlds_Behind_BooksTests.swift */; };
 		9B5080D620CC782200FA3B11 /* Worlds_Behind_BooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5080D520CC782200FA3B11 /* Worlds_Behind_BooksUITests.swift */; };
-		9BC6CFC720CC7DC30006F9B4 /* CoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC6CFC620CC7DC30006F9B4 /* CoverViewController.swift */; };
+		9B76A81220CEEB5F00784885 /* book_cover1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B76A80F20CEEB5F00784885 /* book_cover1.jpg */; };
+		9B76A81320CEEB5F00784885 /* book_cover2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B76A81020CEEB5F00784885 /* book_cover2.jpg */; };
+		9B76A81420CEEB5F00784885 /* book_cover3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B76A81120CEEB5F00784885 /* book_cover3.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 		9B5080B220CC782100FA3B11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B5080B420CC782100FA3B11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9B5080B720CC782100FA3B11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9B5080BA20CC782100FA3B11 /* Worlds_Behind_Books.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Worlds_Behind_Books.xcdatamodel; sourceTree = "<group>"; };
 		9B5080BC20CC782200FA3B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B5080BF20CC782200FA3B11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B5080C120CC782200FA3B11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,7 +50,9 @@
 		9B5080D120CC782200FA3B11 /* Worlds_Behind_BooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Worlds_Behind_BooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B5080D520CC782200FA3B11 /* Worlds_Behind_BooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worlds_Behind_BooksUITests.swift; sourceTree = "<group>"; };
 		9B5080D720CC782200FA3B11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9BC6CFC620CC7DC30006F9B4 /* CoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverViewController.swift; sourceTree = "<group>"; };
+		9B76A80F20CEEB5F00784885 /* book_cover1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_cover1.jpg; sourceTree = "<group>"; };
+		9B76A81020CEEB5F00784885 /* book_cover2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_cover2.jpg; sourceTree = "<group>"; };
+		9B76A81120CEEB5F00784885 /* book_cover3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_cover3.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +105,11 @@
 			children = (
 				9B5080B220CC782100FA3B11 /* AppDelegate.swift */,
 				9B5080B420CC782100FA3B11 /* ViewController.swift */,
-				9BC6CFC620CC7DC30006F9B4 /* CoverViewController.swift */,
 				9B5080B620CC782100FA3B11 /* Main.storyboard */,
 				9B5080BC20CC782200FA3B11 /* Assets.xcassets */,
 				9B5080BE20CC782200FA3B11 /* LaunchScreen.storyboard */,
 				9B5080C120CC782200FA3B11 /* Info.plist */,
-				9B5080B920CC782100FA3B11 /* Worlds_Behind_Books.xcdatamodeld */,
+				9B76A80E20CEEB5F00784885 /* Content */,
 			);
 			path = Worlds_Behind_Books;
 			sourceTree = "<group>";
@@ -129,6 +130,17 @@
 				9B5080D720CC782200FA3B11 /* Info.plist */,
 			);
 			path = Worlds_Behind_BooksUITests;
+			sourceTree = "<group>";
+		};
+		9B76A80E20CEEB5F00784885 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				9B76A80F20CEEB5F00784885 /* book_cover1.jpg */,
+				9B76A81020CEEB5F00784885 /* book_cover2.jpg */,
+				9B76A81120CEEB5F00784885 /* book_cover3.jpg */,
+			);
+			name = Content;
+			path = ../../Content;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +247,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B76A81320CEEB5F00784885 /* book_cover2.jpg in Resources */,
+				9B76A81220CEEB5F00784885 /* book_cover1.jpg in Resources */,
+				9B76A81420CEEB5F00784885 /* book_cover3.jpg in Resources */,
 				9B5080C020CC782200FA3B11 /* LaunchScreen.storyboard in Resources */,
 				9B5080BD20CC782200FA3B11 /* Assets.xcassets in Resources */,
 				9B5080B820CC782100FA3B11 /* Main.storyboard in Resources */,
@@ -264,8 +279,6 @@
 			files = (
 				9B5080B520CC782100FA3B11 /* ViewController.swift in Sources */,
 				9B5080B320CC782100FA3B11 /* AppDelegate.swift in Sources */,
-				9BC6CFC720CC7DC30006F9B4 /* CoverViewController.swift in Sources */,
-				9B5080BB20CC782100FA3B11 /* Worlds_Behind_Books.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,19 +599,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		9B5080B920CC782100FA3B11 /* Worlds_Behind_Books.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				9B5080BA20CC782100FA3B11 /* Worlds_Behind_Books.xcdatamodel */,
-			);
-			currentVersion = 9B5080BA20CC782100FA3B11 /* Worlds_Behind_Books.xcdatamodel */;
-			path = Worlds_Behind_Books.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 9B5080A720CC782100FA3B11 /* Project object */;
 }
