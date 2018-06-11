@@ -15,6 +15,7 @@
 		9B5080C020CC782200FA3B11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B5080BE20CC782200FA3B11 /* LaunchScreen.storyboard */; };
 		9B5080CB20CC782200FA3B11 /* Worlds_Behind_BooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5080CA20CC782200FA3B11 /* Worlds_Behind_BooksTests.swift */; };
 		9B5080D620CC782200FA3B11 /* Worlds_Behind_BooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5080D520CC782200FA3B11 /* Worlds_Behind_BooksUITests.swift */; };
+		9BC6CFC720CC7DC30006F9B4 /* CoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC6CFC620CC7DC30006F9B4 /* CoverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9B5080D120CC782200FA3B11 /* Worlds_Behind_BooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Worlds_Behind_BooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B5080D520CC782200FA3B11 /* Worlds_Behind_BooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worlds_Behind_BooksUITests.swift; sourceTree = "<group>"; };
 		9B5080D720CC782200FA3B11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BC6CFC620CC7DC30006F9B4 /* CoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				9B5080B220CC782100FA3B11 /* AppDelegate.swift */,
 				9B5080B420CC782100FA3B11 /* ViewController.swift */,
+				9BC6CFC620CC7DC30006F9B4 /* CoverViewController.swift */,
 				9B5080B620CC782100FA3B11 /* Main.storyboard */,
 				9B5080BC20CC782200FA3B11 /* Assets.xcassets */,
 				9B5080BE20CC782200FA3B11 /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				9B5080B520CC782100FA3B11 /* ViewController.swift in Sources */,
 				9B5080B320CC782100FA3B11 /* AppDelegate.swift in Sources */,
+				9BC6CFC720CC7DC30006F9B4 /* CoverViewController.swift in Sources */,
 				9B5080BB20CC782100FA3B11 /* Worlds_Behind_Books.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
