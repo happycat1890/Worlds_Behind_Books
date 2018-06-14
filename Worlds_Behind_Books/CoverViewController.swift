@@ -8,10 +8,11 @@
 
 import UIKit
 
-class CoverViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextViewDelegate {
+class CoverViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     var selectedCover: String?
     @IBOutlet var imageView: UIImageView!
+    
     
     var mediaTypes = [String]()
     
@@ -25,22 +26,51 @@ class CoverViewController: UIViewController, UITableViewDelegate, UITableViewDat
             imageView.image = UIImage(named: imageToLoad)
         }
         
-        let textChildView = UITextView(frame: CGRect(x: 0, y: 482, width: self.view.frame.width, height: 101))
+       // mediaTypes += ["Art", "Music", "Social Background", "Environment", "Video Clips"]
+        
+        
+        imageView.contentMode = .scaleAspectFit
+        
+        let textChildView = UITextField(frame: CGRect(x: 0, y: 482, width: self.view.frame.width, height: 101))
+        textChildView.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
         textChildView.delegate = self
+        
+        
         self.view.addSubview(textChildView)
         
-        let tableChildView = UITableView(frame: CGRect(x: 0, y: 591, width: self.view.frame.width, height: 128)) // 'let' because never mutated but may change
+        
+        
+        //mediaTypes.append("Art")
+        
+       let tableChildView = UITableView(frame: CGRect(x: 0, y: 591, width: self.view.frame.width, height: 128)) // 'let' because never mutated but may change
         tableChildView.register(UITableViewCell.self, forCellReuseIdentifier: "MediaType")
+        
         tableChildView.dataSource = self
         tableChildView.delegate = self
         self.view.addSubview(tableChildView)
         
-       /* let tableChild = storyboard?.instantiateViewController(withIdentifier: "tableChild")
-        self.addChildViewController(tableChild!)
-        self.view.addSubview(tableChild?.view ?? self.view)
-        tableChild?.didMove(toParentViewController: self) */
+       // self.mediaTypes.append("Art")
+       // self.mediaTypes.append("Music")
+        
+       /* tableChildView.beginUpdates()
+        tableChildView.insertRows(at: [IndexPath.init(row: self.mediaTypes.count-1, section: 0)], with: .automatic)
+        tableChildView.endUpdates() */
+        
+        
+        
+        //getting rid of persistent keyboard
+      /*  let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard)) //odd fix */
+        
+        //essential step to a tap
+        /*view.addGestureRecognizer(tap) */
+        
+      
         
     }
+    
+   /* func dismissKeyboard() {
+        view.endEditing(true)
+    } */
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
