@@ -8,12 +8,12 @@
 
 import UIKit
 
-class CoverViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CoverViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextViewDelegate {
     
     var selectedCover: String?
     @IBOutlet var imageView: UIImageView!
     
-    var mediaTypes: String?
+    var mediaTypes = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,11 @@ class CoverViewController: UIViewController, UITableViewDelegate, UITableViewDat
             imageView.image = UIImage(named: imageToLoad)
         }
         
-        let tableChildView = UITableView(frame: CGRect(x: 0, y: UIApplication.shared.statusBarFrame.size.height, width: self.view.frame.width, height: self.view.frame.height)) // 'let' because never mutated but may change
+        let textChildView = UITextView(frame: CGRect(x: 0, y: 482, width: self.view.frame.width, height: 101))
+        textChildView.delegate = self
+        self.view.addSubview(textChildView)
+        
+        let tableChildView = UITableView(frame: CGRect(x: 0, y: 591, width: self.view.frame.width, height: 128)) // 'let' because never mutated but may change
         tableChildView.register(UITableViewCell.self, forCellReuseIdentifier: "MediaType")
         tableChildView.dataSource = self
         tableChildView.delegate = self
@@ -53,12 +57,15 @@ class CoverViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mediaTypes?.count ?? 0 //when the 'optional unwrapping' error is persistent
+        return mediaTypes.count //when the 'optional unwrapping' error is persistent
                                     // make sure that '?' and '??' are both implemented
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mediaType", for: indexPath)
+        //distinguish the contents of the cell object
+        cell.textLabel?.text = mediaTypes[indexPath.row]
+        return cell
     }
 
     override func didReceiveMemoryWarning() {
