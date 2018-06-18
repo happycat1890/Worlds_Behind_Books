@@ -56,16 +56,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZlP-Nm-6nO">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZlP-Nm-6nO">
+                                <rect key="frame" x="0.0" y="20" width="375" height="410"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gEV-7R-Hyn">
+                                <rect key="frame" x="0.0" y="450" width="375" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZlP-Nm-6nO" firstAttribute="leading" secondItem="6eK-9M-gQO" secondAttribute="leading" id="2m0-BK-i3H"/>
-                            <constraint firstItem="ZlP-Nm-6nO" firstAttribute="top" secondItem="jQZ-ww-hry" secondAttribute="top" id="Qb0-5j-S6l"/>
-                            <constraint firstItem="ZlP-Nm-6nO" firstAttribute="bottom" secondItem="jQZ-ww-hry" secondAttribute="bottom" id="VEy-i2-RaN"/>
-                            <constraint firstAttribute="trailing" secondItem="ZlP-Nm-6nO" secondAttribute="trailing" id="WY0-zX-Ugy"/>
+                            <constraint firstItem="gEV-7R-Hyn" firstAttribute="centerX" secondItem="ZlP-Nm-6nO" secondAttribute="centerX" id="hvO-bk-AFg"/>
+                            <constraint firstItem="ZlP-Nm-6nO" firstAttribute="centerX" secondItem="jQZ-ww-hry" secondAttribute="centerX" id="pSU-gD-jVn"/>
+                            <constraint firstItem="gEV-7R-Hyn" firstAttribute="top" secondItem="ZlP-Nm-6nO" secondAttribute="bottom" constant="40" id="sOC-VF-l2V"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jQZ-ww-hry"/>
                     </view>
