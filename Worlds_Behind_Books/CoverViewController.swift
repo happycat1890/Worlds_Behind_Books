@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVFoundation
+
 
 
 
@@ -14,6 +16,8 @@ class CoverViewController: UIViewController {
     
     var selectedCover: String?
     @IBOutlet var imageView: UIImageView!
+    
+    var musicPlayer: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
