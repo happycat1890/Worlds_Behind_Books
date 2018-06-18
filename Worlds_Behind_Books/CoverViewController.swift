@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVFoundation
+
 
 class CoverViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
@@ -14,6 +16,7 @@ class CoverViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var selectedCover: String?
     @IBOutlet var imageView: UIImageView!
     
+    var musicPlayer: AVAudioPlayer?
     var mediaTypes = [String]()
     
     override func viewDidLoad() {
