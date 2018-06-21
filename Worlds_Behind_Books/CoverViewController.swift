@@ -42,7 +42,7 @@ class CoverViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.view.addSubview(textChildView)
         
         var tableChildView: UITableView = UITableView()
-         mediaTypes += ["Art", "Music" /*, "Environment", "Social Backgrounds","Video Clips"*/]
+         mediaTypes += ["Art", "Music" , "Environment", "Social Backgrounds","Video Clips"]
         
         tableChildView = UITableView(frame: CGRect(x: 0, y: 591, width: self.view.frame.width, height: 200))
         tableChildView.dataSource = self
