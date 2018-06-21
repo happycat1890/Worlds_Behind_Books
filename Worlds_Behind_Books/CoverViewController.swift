@@ -8,11 +8,17 @@
 
 import UIKit
 
-class CoverViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+class CoverViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextViewDelegate, UIScrollViewDelegate {
     
     
     var selectedCover: String?
     @IBOutlet var imageView: UIImageView!
+    var containerView: UIView!
+    var scrollView: UIScrollView!
+    
+    var tableBottomAnchor: NSLayoutConstraint?
+    //var textBottomAnchor: NSLayoutConstraint?
+    var tableChildView: UITableView!
     
     var mediaTypes = [String]()
     
@@ -26,30 +32,78 @@ class CoverViewController: UIViewController, UITableViewDelegate, UITableViewDat
             imageView.image = UIImage(named: imageToLoad)
         }
         
-       
+        //containerView = UIView()
+        
+    
+        
+        //no scroll view by default, just treat it as with any other object
+        self.scrollView = UIScrollView()
+        scrollView.delegate = self
+        //works!
+         //but is content size required or can we just use the frame
+        self.scrollView.contentSize = self.view.frame.size
+        self.view.addSubview(scrollView)
+       // self.scrollView.addSubview(containerView)
+        //containerView.isUserInteractionEnabled = true
+      //  containerView.addSubview(imageView)
         
         
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleToFill
         
-        let textChildView = UITextField(frame: CGRect(x: 0, y: 482, width: self.view.frame.width, height: 101))
+        let textChildView = UITextView(frame: CGRect(x: 0, y: 480, width: self.view.frame.width, height: 100))
+        textChildView.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        //constraints here
+        //delete them from IB first
+        
         textChildView.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
         textChildView.delegate = self
+        //do we need to formally register this view - would make sense
+        //not now because it's already included in the interface builder
+        //save for another branch
+        textChildView.isUserInteractionEnabled = false
+        
+    
+        
+       self.view.addSubview(textChildView)
+        //scrollView.addSubview(textChildView) need to get this to work
+       // containerView.addSubview(textChildView)
         
         
-        self.view.addSubview(textChildView)
+        tableChildView = UITableView()
+         mediaTypes += ["Art", "Music" , "Environment", "Social Backgrounds","Video Clips"]
         
-        var tableChildView: UITableView = UITableView()
-         mediaTypes += ["Art", "Music" /*, "Environment", "Social Backgrounds","Video Clips"*/]
+      
+        tableChildView = UITableView(frame: CGRect(x: 0, y: 590, width: self.view.frame.width, height: 200))
+          //textChildView.bottomAnchor.constraint(equalTo: tableChildView.topAnchor, constant: 10).isActive = true
         
-        tableChildView = UITableView(frame: CGRect(x: 0, y: 591, width: self.view.frame.width, height: 200))
+        //add constraints here
+        
+        tableChildView.translatesAutoresizingMaskIntoConstraints = false;
+      // tableChildView.topAnchor.constraint(equalTo: textChildView.bottomAnchor).isActive = true
+        
+      
+        
         tableChildView.dataSource = self
         tableChildView.delegate = self
         //storyboard no longer required!!
         tableChildView.register(UITableViewCell.self, forCellReuseIdentifier: "mediaType")
         
+        
         //formally add
         
         self.view.addSubview(tableChildView)
+        
+       
+        //containerView.addSubview(tableChildView)
+    }
+    
+    
+    override func viewDidLayoutSubviews() {
+        tableBottomAnchor = tableChildView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 20)
+        tableBottomAnchor?.isActive = true
+        
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mediaTypes.count
