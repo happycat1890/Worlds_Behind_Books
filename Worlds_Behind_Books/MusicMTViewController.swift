@@ -10,12 +10,15 @@ import UIKit
 import AVFoundation
 import AudioToolbox // ?
 
-class MusicPlayerViewController: UIViewController, AVAudioPlayerDelegate {
+class MusicMTViewController: UIViewController, AVAudioPlayerDelegate {
     
     var player: AVAudioPlayer?
+    var selectedMT: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = selectedMT
         
         // Do any additional setup after loading the view.
     }

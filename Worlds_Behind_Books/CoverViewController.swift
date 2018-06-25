@@ -64,6 +64,37 @@ class CoverViewController: UIViewController, UITableViewDelegate, UITableViewDat
         cell.textLabel?.text = mediaTypes[indexPath.row]
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let selectedMT: String = mediaTypes[indexPath.row] //don't use 'let' by default unless never mutated
+        
+        //simplest method of pushing
+        
+        if selectedMT == "Music" {
+            let musicViewController = MusicMTViewController()
+            self.navigationController?.pushViewController(musicViewController, animated: true)
+            
+        } else if selectedMT == "Art" {
+            let artViewController = ArtMTViewController()
+            self.navigationController?.pushViewController(artViewController, animated: true)
+            
+        } else if selectedMT == "Environment" {
+            let environViewController = EnvironmentMTViewController()
+            self.navigationController?.pushViewController(environViewController, animated: true)
+            
+        } else if selectedMT == "Social Backgrounds" {
+            let socialViewController = SocialMTViewController()
+            self.navigationController?.pushViewController(socialViewController, animated: true)
+            
+        } else if selectedMT == "Video Clips" {
+            let videoViewController = VideoMTViewController()
+            self.navigationController?.pushViewController(videoViewController, animated: true)
+            
+        }
+        
+       
+    }
         
         //mediaTypes.append("Art")
         

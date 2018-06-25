@@ -9,9 +9,13 @@
 import UIKit
 
 class ArtMTViewController: UIViewController {
+    
+    var selectedMT: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = selectedMT
 
         // Do any additional setup after loading the view.
     }
