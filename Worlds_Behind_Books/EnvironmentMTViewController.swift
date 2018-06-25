@@ -16,6 +16,7 @@ class EnvironmentMTViewController: UIViewController {
         super.viewDidLoad()
         
         title = selectedMT
+        self.navigationController?.navigationItem.largeTitleDisplayMode = .never
 
         // Do any additional setup after loading the view.
     }
