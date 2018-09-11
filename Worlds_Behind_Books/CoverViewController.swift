@@ -29,9 +29,6 @@ class CoverViewController: UIViewController, UITableViewDelegate, UITableViewDat
             imageView.image = UIImage(named: imageToLoad)
         }
         
-       
-        
-        
         imageView.contentMode = .scaleAspectFit
         
         let textChildView = UITextField(frame: CGRect(x: 0, y: 482, width: self.view.frame.width, height: 101))
